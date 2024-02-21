@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form.css">
+    <title>User Settings</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Place Keeper</h1>
+        <h2>Let's find your way back to your best places</h2>
+        <nav class="top-nav">
+            <a class="home-button" href="index.html">Home</a>
+            <a href="user-prefs.html">User Settings</a>
+            <a href="map.html">Favorite places</a> 
+        </nav>
+    </header>
+    <h3>Sign Up</h3>
+    <form id="frmRegister" onsubmit="onSubmit(event)">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" />
+
+        <label for="age">Age: <span id="sAge">26</span></label>
+        <input type="range" id="age" name="age" step="1" min="18" max="120" value="26" onchange="showAge(this.value)" />
+
+        <h2>colors</h2>
+
+        <label for="color">Set Background Color: </label>
+        <input type="color" id="color" name="color" form="frmRegister" value="#ff0000" id="color" />
+
+        <label for="color">Set Text Color: </label>
+        <input type="color" id="color" name="colorTxt" form="frmRegister" value="#ff0000" id="color" />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" />
+
+        <label for="appt">Birth Time:</label>
+        <input type="time" id="appt" name="appt" min="00:00" max="23:59" required />
+        <button>Submit</button>
+    </form>
+    <script src="js/storage.service.js"></script>
+    <script src="js/services/user.service.js"></script>
+    <script src="js/services/user.controller.js"></script>
+</body>
+
+</html>
